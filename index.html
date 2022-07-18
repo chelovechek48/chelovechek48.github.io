@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Найди пару</title>
+<script defer src="main.js"></script><script defer src="settings.js"></script><link href="main.css" rel="stylesheet"></head>
+<body>
+   <div class="mem-game">
+      <div class="mem-game__popup">
+         <div class="mem-game__popup-pause">
+            <button class="mem-game__popup-hide"><img src="close..png" alt=""></button>
+            <div class="mem-game__popup-header">
+               <h2>пауза</h2>
+               <img src="header..png" alt="">
+            </div>
+            <div class="mem-game__popup-front">
+               <h2>Выпейте чашку чая</h2>
+               <img class="mem-game__popup-front-bg" src="small-front..png" alt="">
+            </div>
+            <div class="mem-game__popup-btns">
+               <button class="mem-game__retry-btn"><img src="retry..png" alt="кнопка заново"></button>
+               <button class="mem-game__menu-btn"><img src="menu..png" alt="кнопка меню"></button>
+            </div>
+            <img class="mem-game__popup-bg" src="small-bg..png" alt="">
+         </div>
+         <div class="mem-game__popup-defeat">
+            <div class="mem-game__popup-header">
+               <h2>поражение</h2>
+               <img src="header..png" alt="">
+            </div>
+            <div class="mem-game__popup-front">
+               <div class="mem-game__popup-stars">
+                  <img class="mem-game__popup-stars-0" src="stars-0..png" alt="">
+               </div>
+               <img class="mem-game__popup-front-bg" src="small-front..png" alt="">
+            </div>
+            <div class="mem-game__popup-btns">
+               <button class="mem-game__retry-btn"><img src="retry..png" alt="кнопка заново"></button>
+               <button class="mem-game__menu-btn"><img src="menu..png" alt="кнопка меню"></button>
+            </div>
+            <img class="mem-game__popup-bg" src="small-bg..png" alt="">
+         </div>
+         <div class="mem-game__popup-victory">
+            <div class="mem-game__popup-header">
+               <h2>победа</h2>
+               <img src="header..png" alt="">
+            </div>
+            <div class="mem-game__popup-front">
+               <div class="mem-game__popup-stars">
+                  <img class="mem-game__popup-stars-1" src="stars-1..png" starCount="1" alt="">
+                  <img class="mem-game__popup-stars-2" src="stars-2..png" starCount="2" alt="">
+                  <img class="mem-game__popup-stars-3" src="stars-3..png" starCount="3" alt="">
+               </div>
+               <div class="mem-game__popup-score">
+                  <h3>твой счёт</h3>
+                  <h2 class="mem-game__popup-score-current">00:00</h2>
+                  <h3>лучший счёт</h3>
+                  <h4 class="mem-game__popup-score-best">00:10</h4>
+               </div>
+               <img class="mem-game__popup-front-bg" src="medium-front..png" alt="">
+            </div>
+            <div class="mem-game__popup-btns">
+               <button class="mem-game__retry-btn"><img src="retry..png" alt="кнопка заново"></button>
+               <button class="mem-game__menu-btn"><img src="menu..png" alt="кнопка меню"></button>
+            </div>
+            <img class="mem-game__popup-bg" src="medium-bg..png" alt="">
+         </div>
+         <div class="mem-game__popup-settings">
+            <button class="mem-game__popup-hide"><img src="close..png" alt=""></button>
+            <div class="mem-game__popup-header">
+               <h2>настройки</h2>
+               <img src="header..png" alt="">
+            </div>
+            <div class="mem-game__popup-front">
+               <div class="mem-game__popup-front-decal"></div>
+               <div class="mem-game__popup-settings-music">
+                  <h3>музыка</h3>
+                  <input type="checkbox" class="mem-game__player">
+                  <audio class="mem-game__soundtrack" src="soundtrack..mp3" loop hidden></audio>
+               </div>
+               <form class="mem-game__popup-settings-level">
+                  <h3>сложность:</h3>
+                  <div class="mem-game__popup-settings-level-radio">
+                     <input type="radio" id="level1" name="level" value="easy" rows=3 time="60000">
+                     <label for="level1">легкая</label>
+
+                     <input type="radio" id="level2" name="level" value="medium" rows=4 time="90000">
+                     <label for="level2">средняя</label>
+                     
+                     <input type="radio" id="level3" name="level" value="hard" rows=5 time="120000">
+                     <label for="level3">сложная</label>
+
+                     <input type="radio" id="level4" name="level" value="hardest" rows=6 time="150000">
+                     <label for="level4">очень сложная</label>
+                  </div>
+               </form>
+               <img class="mem-game__popup-front-bg" src="medium-front..png" alt="">
+            </div>
+            <img class="mem-game__popup-bg" src="medium-bg..png" alt="">
+         </div>
+         <div class="mem-game__popup-rating">
+            <button class="mem-game__popup-hide"><img src="close..png" alt=""></button>
+            <div class="mem-game__popup-header">
+               <h2>рейтинг</h2>
+               <img src="header..png" alt="">
+            </div>
+            <div class="mem-game__popup-front">
+               <ul class="mem-game__popup-rating-list">
+                  <li><span>01:23</span><span>1</span></li>
+               </ul>
+               <div class="mem-game__popup-front-decal"></div>
+               <img class="mem-game__popup-front-bg" src="medium-front..png" alt="">
+            </div>
+            <img class="mem-game__popup-bg" src="medium-bg..png" alt="">
+         </div>
+      </div>
+      <div class="mem-game__menu">
+         <div class="mem-game__menu-top">
+            <button class="mem-game__rating-btn" popup="rating">
+               <img src="rating..png" alt="кнопка рейтинг">
+            </button>
+            <button class="mem-game__settings-btn" popup="settings">
+               <img src="settings..png" alt="кнопка настройки">
+            </button>
+         </div>
+         <img class="mem-game__menu-logo" src="logo..png" alt="логотип игры">
+         <button class="mem-game__play-btn">
+            <img src="play..png" alt="кнопка играть">
+         </button>
+      </div>
+      <div class="mem-game__topbar">
+         <div class="mem-game__topbar-tools">
+            <div class="mem-game__topbar-timer">
+               <span></span>
+               <img src="timer..png" alt="">
+            </div>
+            <button class="mem-game__pause-btn" popup="pause"><img src="pause..png" alt=""></button>
+         </div>
+         <img class="mem-game__topbar-bg" src="topbar..png" alt="верхняя панель">
+      </div>
+      <div class="mem-game__playfield">
+         <img class="mem-game__playfield-cube" src="arrow..png" alt="arrow">
+         <img class="mem-game__playfield-cube" src="bomb..png" alt="bomb">
+         <img class="mem-game__playfield-cube" src="branch..png" alt="branch">
+         <img class="mem-game__playfield-cube" src="clock..png" alt="clock">
+         <img class="mem-game__playfield-cube" src="cloud..png" alt="cloud">
+         <img class="mem-game__playfield-cube" src="crystal..png" alt="crystal">
+         <img class="mem-game__playfield-cube" src="drop..png" alt="drop">
+         <img class="mem-game__playfield-cube" src="eye..png" alt="eye">
+         <img class="mem-game__playfield-cube" src="fence..png" alt="fence">
+         <img class="mem-game__playfield-cube" src="fire..png" alt="fire">
+         <img class="mem-game__playfield-cube" src="gold..png" alt="gold">
+         <img class="mem-game__playfield-cube" src="mask..png" alt="mask">
+         <img class="mem-game__playfield-cube" src="nut..png" alt="nut">
+         <img class="mem-game__playfield-cube" src="sheet..png" alt="sheet">
+         <img class="mem-game__playfield-cube" src="skull..png" alt="skull">
+         <img class="mem-game__playfield-cube" src="star..png" alt="star">
+         <img class="mem-game__playfield-cube" src="wave..png" alt="wave">
+         <img class="mem-game__playfield-cube" src="wood..png" alt="wood">
+      </div>
+      <div class="mem-game__bg">
+         <div class="clouds-small"></div>
+         <div class="clouds-large"></div>
+         <img class="island" src="island..png" alt="острова">
+      </div>
+   </div>
+</body>
+</html>
