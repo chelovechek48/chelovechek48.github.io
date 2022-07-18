@@ -86,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"assets/images/playfield/cubes/.front..png\";\n\n//# sourceURL=webpack:///./assets/images/playfield/cubes/front.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/playfield/cubes/front.png\";\n\n//# sourceURL=webpack:///./assets/images/playfield/cubes/front.png?");
 
 /***/ })
 
