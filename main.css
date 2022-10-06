@@ -571,16 +571,15 @@
 }
 .order__features-circle {
   position: relative;
-  aspect-ratio: 1;
-  min-width: 100px;
+  width: 100px;
+  height: 100px;
   background-color: #3E9CDC;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   border-radius: 50%;
-  outline: 5px solid #286690;
-  outline-offset: -5px;
+  box-shadow: 0 0 0 5px #286690;
 }
 .order__features-circle::before {
   right: 100%;
