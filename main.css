@@ -579,7 +579,7 @@
   justify-content: center;
   box-sizing: border-box;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px #286690;
+  box-shadow: 0 0 0 5px #286690 inset;
 }
 .order__features-circle::before {
   right: 100%;
