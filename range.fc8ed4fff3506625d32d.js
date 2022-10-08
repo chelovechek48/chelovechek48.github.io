@@ -1,1 +1,0 @@
-!function(){"use strict";var e=document.querySelector(".form__range-value"),t=document.querySelector(".form__range-input");t.addEventListener("input",(function(){e.textContent="".concat(t.value," %")}))}();
