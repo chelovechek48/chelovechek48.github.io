@@ -1,4 +1,0 @@
-@media(max-width: 64rem){.header__container{flex-wrap:wrap;gap:1.25rem;padding-top:1.25rem;padding-bottom:1.25rem}.header__menu{order:1;border-top:.25rem solid #e0e0e0;width:100%;padding:1.25rem;margin:0 calc(0px - 1.25rem) calc(0px - 1.25rem) calc(0px - 1.25rem)}}
-@media(max-width: 64rem){.main{--section-gap: 4rem}}
-@media(max-width: 64rem){.get-started__title{margin:0}}
-@media(max-width: 64rem){.footer__container{flex-direction:column}.footer__item{flex:0;align-items:center}.footer__item:first-child{flex-direction:row}}
