@@ -1,0 +1,1 @@
+@media (min-width: 401px){.what-documents__item{border-radius:.25rem 3rem 3rem;padding:2rem;position:relative}.what-documents__item::before{content:counter(list__item);position:absolute;top:-0.5em;left:0;color:#03073c;font-size:4rem;font-weight:700;line-height:1}}
