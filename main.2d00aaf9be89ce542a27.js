@@ -1,0 +1,1 @@
+!function(){"use strict";var e=document.querySelector(".menu-burger"),t=document.querySelector(".header__list");e.addEventListener("click",(function(){e.classList.toggle("active"),t.classList.toggle("active")}))}();
