@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelectorAll(".running-line").forEach((function(n){n.innerHTML+=n.innerHTML}))}();
