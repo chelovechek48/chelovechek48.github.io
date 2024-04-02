@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Попап</title>
+</head>
+<body>
+  <div id="root">
+    <!-- <dialog id="popup">
+      <button onclick="window.popup.close()"></button>
+      <form onsubmit="addToStorage()" action="" method="get">
+        <fieldset class="fieldset">
+          <legend>Заполните форму</legend>
+          <div>
+            <label for="username">Имя</label>
+            <input type="text" name="имя" id="username" required
+              placeholder="Иван Иванов">
+          </div>
+          <div>
+            <label for="age">Возвраст</label>
+            <input type="number" name="возвраст" id="age" required
+              placeholder="18">
+          </div>
+          <div>
+            <label for="phone">Номер телефона</label>
+            <input type="tel" name="телефон" id="phone" required
+              placeholder="8 999 999 99 99">
+          </div>
+          <div>
+            <label for="email">Почта</label>
+            <input type="email" name="почта" id="email" required
+              placeholder="Ivanov2000@gmail.com">
+          </div>
+          <div>
+            <label for="car">Марка машины (если есть)</label>
+            <input type="text" name="машина" id="car"
+              placeholder="BMW">
+          </div>
+          <div>
+            <input type="submit" value="Отправить">
+          </div>
+        </fieldset>
+      </form>
+    </dialog> -->
+  </div>
+  <script>
+    // создание всех DOM элементов
+    const showPopupButton = document.createElement('button'); showPopupButton.innerHTML = 'Начать';
+
+    const formTitle = document.createElement('legend'); formTitle.innerHTML = 'Заполните форму';
+    const formInner = document.createElement('fieldset'); formInner.append(formTitle);
+
+    const form = document.createElement('form'); form.append(formInner); form.action = ''; form.method = 'get';
+    const popupBackground = document.createElement('button');
+    const popup = document.createElement('dialog'); popup.append(form, popupBackground);
+
+    // данные для генерации элементов формы
+    const formInputs = [
+      {
+        type: 'text',
+        title: 'Имя', placeholder: 'Иван Иванов',
+        id: 'username', name: 'имя',
+        required: true
+      },
+      {
+        type: 'number',
+        title: 'Возвраст', placeholder: 18,
+        id: 'age', name: 'возвраст',
+        required: true
+      },
+      {
+        type: 'tel',
+        title: 'Номер телефона', placeholder: '8 999 999 99 99',
+        id: 'phone', name: 'телефон',
+        required: true
+      },
+      {
+        type: 'email',
+        title: 'Почта', placeholder: 'Ivanov2000@gmail.com',
+        id: 'email', name: 'почта',
+        required: true
+      },
+      {
+        type: 'text',
+        title: 'Марка машины (если есть)', placeholder: 'BMW',
+        id: 'car', name: 'машина',
+        required: false
+      },
+      {
+        type: 'submit',
+        value: 'Отправить'
+      },
+    ]
+    
+    // генерациия элементов формы
+    const getFormInner = () => {
+      formInputs.forEach(inputData => {
+        const inputDOM = document.createElement('input');
+        const inputDataEntries = Object.entries(inputData);
+        // добавить атрибуты в input из inputData
+        inputDataEntries.forEach(inputAttribute => {
+          const attributeName = inputAttribute[0];
+          const attributeValue = inputAttribute[1];
+          inputDOM[attributeName] = attributeValue;
+        })
+
+        // создать label
+        const getLabelDOM = () => {
+          const labelDOM = document.createElement('label');
+          labelDOM.innerHTML = inputData.title;
+          return labelDOM;
+        }
+
+        // если это не type="submit" => добавить заголовок к input
+        const isSubmitInput = inputData.type === 'submit';
+        const formItemElements = !isSubmitInput
+          ? [getLabelDOM(), inputDOM]
+          : [inputDOM];
+
+        const formItem = document.createElement('div');
+        formItem.append(...formItemElements);
+        formInner.append(formItem);
+      });
+    }
+    
+    // генерациия таблицы с ранее введенными данными
+    const getTable = (dataObject) => {
+      const table = document.createElement('table');
+      const dataEntries = Object.entries(dataObject);
+      dataEntries.forEach(el => {
+        const inputName = el[0];
+        const inputValue = el[1];
+
+        const key  = document.createElement('th');
+        key .innerHTML = inputName;
+        
+        const value = document.createElement('th');
+        value.innerHTML = inputValue;
+        
+        const tr = document.createElement('tr');
+        tr.append(key , value);
+        table.append(tr);
+      });
+      return table
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      getFormInner();
+
+      // создать массив элементов страницы
+      const inputsData = JSON.parse(window.localStorage.getItem('inputsData'));
+      const pageElements = inputsData
+        ? [showPopupButton, popup, getTable(inputsData)] // если есть данные в localStorage создать таблицу
+        : [showPopupButton, popup];
+
+      // добавить все элементы в DOM
+      const root = document.getElementById('root');
+      root.append(...pageElements);
+
+      // открыть попап при клике на кнопку в центре экрана
+      showPopupButton.addEventListener('click', () => {
+        popup.showModal();
+      })
+      
+      // зыкрыть попап при клике область вокруг него
+      popupBackground.addEventListener('click', () => {
+        popup.close();
+      })
+
+      // добавить введеные данные в localStorage
+      const setLocalStorage = () => {
+        const inputsDataObject = {};
+        const inputList = popup.querySelectorAll('input');
+        inputList.forEach(input => {
+          const hasValue = input.value;
+          const isSubmit = input.type === 'submit';
+          // если это заполненное поле и не type="sybmit" => добавить его в localStorage
+          if (hasValue && !isSubmit) {
+            const { name, value } = input;
+            inputsDataObject[name] = value;
+          }
+        });
+        const inputsDataJSON = JSON.stringify(inputsDataObject, null, 2);
+        setTimeout(() => {
+          console.log(inputsDataJSON);
+        }, 1);
+        window.localStorage.setItem('inputsData', inputsDataJSON);
+      }
+
+      form.addEventListener("submit", setLocalStorage); // при отправке формы добавить введеные данные в localStorage
+    })
+  </script>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      color: inherit;
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+      border: none;
+      box-sizing: border-box;
+    }
+
+    #root {
+      min-height: 100vh;
+      min-height: 100dvh;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+    #root > button {
+      font-size: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    button,
+    input[type="submit"] {
+      cursor: pointer;
+    }
+
+    dialog {
+      margin: auto;
+      width: min(500px, 100%);
+      border-radius: 0.5rem;
+    }
+    dialog > button {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgb(0 0 0 / 0.6);
+      z-index: -1;
+    }
+
+    form {
+      padding: 1rem;
+      background-color: #fff;
+    }
+    
+    fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1rem;
+    }
+    fieldset > legend {
+      font-size: 1.25rem;
+    }
+    fieldset > div {
+      flex: 1 1 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 0.25rem;
+
+      font-size: 1rem;
+    }
+    
+    input {
+      background-color: rgb(240, 240, 240);
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    table {
+      background-color: rgb(200, 200, 200);
+    }
+    th {
+      text-align: left;
+      word-break: break-all;
+      font-weight: 400;
+      background-color: #fff;
+      padding: 0.25rem;
+    }
+  </style>
+</body>
+</html>
