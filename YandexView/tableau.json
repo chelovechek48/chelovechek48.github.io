@@ -1,0 +1,9 @@
+{
+  "version": "1.3",
+  "api_version": 1,
+  "layout": {
+      "logo": "/tableau.png",
+      "color": "#FCBA03",
+      "show_title": false
+  }
+}
