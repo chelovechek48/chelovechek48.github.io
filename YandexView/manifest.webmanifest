@@ -1,6 +1,6 @@
 {
   "icons": [
-    { "src": "https://raw.githubusercontent.com/chelovechek48/chelovechek48.github.io/main/YandexView/tableau.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "https://raw.githubusercontent.com/chelovechek48/chelovechek48.github.io/main/YandexView/tableau.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "/tableau.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/tableau.png", "type": "image/png", "sizes": "512x512" }
   ]
 }

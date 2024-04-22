@@ -1,9 +1,9 @@
 {
-  "version": "1.5",
+  "version": "1.0",
   "api_version": 1,
   "layout": {
-      "logo": "https://raw.githubusercontent.com/chelovechek48/chelovechek48.github.io/main/YandexView/tableau.png",
-      "color": "#FCBA03",
-      "show_title": false
+      "logo": "/tableau.png",
+      "color": "#FFFFFF",
+      "show_title": true
   }
 }
