@@ -4,6 +4,6 @@
   "layout": {
       "logo": "tableau.svg",
       "color": "#FFFFFF",
-      "show_title": none
+      "show_title": "none"
   }
 }
