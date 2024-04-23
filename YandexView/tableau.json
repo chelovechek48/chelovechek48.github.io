@@ -2,7 +2,7 @@
   "version": "1.2",
   "api_version": 1,
   "layout": {
-      "logo": "test-logo.svg",
+      "logo": "test-logo.png",
       "color": "#FFFFFF",
       "show_title": false
   }
