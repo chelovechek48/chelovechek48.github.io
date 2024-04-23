@@ -1,9 +1,0 @@
-{
-  "version": "1.0",
-  "api_version": 3,
-  "layout": {
-      "logo": "tableau.svg",
-      "color": "#FFFFFF",
-      "show_title": "none"
-  }
-}
