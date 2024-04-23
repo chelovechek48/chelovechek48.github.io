@@ -1,9 +1,9 @@
 {
-  "version": "1.0",
+  "version": "1.2",
   "api_version": 1,
   "layout": {
-      "logo": "/tableau.png",
-      "color": "#FFFFFF",
+      "logo": "https://mihailgok.ru/tableau.png",
+      "color": "#555555",
       "show_title": true
   }
 }
