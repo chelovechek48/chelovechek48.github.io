@@ -1,0 +1,423 @@
+#Inst{
+  background: url('/img/Links/Inst.svg') center center no-repeat;
+  background-color: #F82181;
+  background-size: 3vw;
+}
+
+#Twitter{
+  background: url('/img/Links/Twitter.svg') center center no-repeat;
+  background-color: #00BBFF;
+  background-size: 3vw;
+}
+
+#Telegram_writer{
+  background: url('/img/Links/Telegram.svg') center center no-repeat;
+  background-color: #0094FF;
+  background-size: 3vw;
+  /* background-position-x: 20px; */
+}
+
+#Telegram_writer:hover{
+ /* animation: Telegram 1s linear infinite; */
+ box-shadow: 0px 0px 0px 1vw rgba(0, 148, 255, 0.3);
+}
+
+#Telegram_prog{
+  background: url('/img/Links/Telegram.svg') center center no-repeat;
+  background-color: #0094FF;
+  background-size: 3vw;
+  /* background-position-x: 20px; */
+}
+
+#Telegram_prog:hover{
+ /* animation: Telegram 1s linear infinite; */
+ box-shadow: 0px 0px 0px 1vw rgba(0, 148, 255, 0.3);
+}
+
+@keyframes Telegram{
+ 0%{
+    box-shadow: 0px 0px 0px 0.5vw rgba(0, 148, 255, 0.3);
+ }
+ 25%{
+    box-shadow: 0px 0px 0px 0.75vw rgba(0, 148, 255, 0.1);
+ }
+ 50%{
+    box-shadow: 0px 0px 0px 0.9vw rgba(0, 148, 255, 0.05);
+ }
+ 75%{
+    box-shadow: 0px 0px 0px 1vw rgba(0, 148, 255, 0.0);
+ }
+ 100%{
+    box-shadow: 0px 0px 0px 1vw rgba(0, 148, 255, 0.0);
+ }
+
+}
+
+#Mail{
+  background: url('/img/Links/Mail.svg') center center no-repeat;
+  background-color: #FFAC00;
+  background-size: 3vw;
+  position: relative;
+}
+
+#Mail:hover{
+ background: url('/img/Copy.svg') center center no-repeat;
+ background-color: #FFAC00;
+ background-size: 2.8vw;
+ box-shadow: 0px 0px 0px 1vw rgb(255, 172, 0, 0.3);
+}
+
+#YouTube{
+  background: url('/img/Links/YouTube.svg') center center no-repeat;
+  background-color: #FF2524;
+  background-size: 3vw;
+}
+
+#YouTube:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(255, 37, 36, 0.3);
+}
+
+#Patreon{
+  background: url('/img/Links/Patreon.svg') center center no-repeat;
+  background-color: #FF4B23;
+  background-size: 3vw;
+}
+
+#Github{
+  background: url('/img/Links/Github.svg') center center no-repeat;
+  background-color: #4A4343;
+  background-size: 3vw;
+}
+#Github:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(74, 67, 67, 0.3);
+}
+
+#Svidcan{
+  background: url('/img/Links/SvidCan.svg') center center no-repeat;
+  background-color: #FF1111;
+  background-size: 3vw;
+}
+
+#Svidcan:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(255, 17, 17, 0.3);
+}
+
+#Donate{
+  background: url('/img/Links/Donate.svg') center center no-repeat;
+  background-color: #3FC932;
+  background-size: 3vw;
+}
+
+#VK{
+  background: url('/img/Links/VK.svg') center center no-repeat;
+  background-color: #2f97ff;
+  background-size: 3vw;
+}
+
+#VK:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(47, 151, 255, 0.3);
+}
+
+#Repl{
+  background: url('/img/Links/Repl.svg') center center no-repeat;
+  background-color: #00BBD4;
+  background-size: 3vw;
+}
+#Repl:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(0, 187, 212, 0.3);
+}
+
+#Gitlab{
+  background: url('/img/Links/Gitlab.svg') center center no-repeat;
+  background-color: #993333;
+  background-size: 3vw;
+}
+#Gitlab:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(153, 51, 51, 0.3);
+}
+
+#Jsfiddle{
+  background: url('/img/Links/Jsfiddle.svg') center center no-repeat;
+  background-color: #0F4EFF;
+  background-size: 3vw;
+}
+
+#Zoom{
+  background: url('/img/Links/Zoom.svg') center center no-repeat;
+  background-color: #2072FF;
+  background-size: 3vw;
+}
+
+#Codepen{
+  background: url('/img/Links/Codepen.svg') center center no-repeat;
+  background-color: #781C7A;
+  background-size: 3vw;
+}
+#Codepen:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(120, 28, 122, 0.3);
+}
+
+#Zen{
+  background: url('/img/Links/Zen.svg') center center no-repeat;
+  background-color: #000;
+  background-size: 3vw;
+}
+#Zen:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(0, 0, 0, 0.3);
+}
+
+#Litmarket{
+  background: url('/img/Links/Litmarket.svg') center center no-repeat;
+  background-color: #8261FF;
+  background-size: 3vw;
+}
+#Litmarket:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(130, 97, 255, 0.3);
+}
+
+#Boosty{
+  background: url('/img/Links/Boosty.svg') center center no-repeat;
+  background-color: #E0693D;
+  background-size: 3vw;
+}
+#Boosty:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(224, 105, 61, 0.3);
+}
+
+#VK{
+  background: url('/img/Links/VK.svg') center center no-repeat;
+  background-color: #2F97FF;
+  background-size: 3vw;
+}
+
+#IOmoney{
+ background: url('/img/Links/IOmoney.svg') center center no-repeat;
+ background-color: #8534FF;
+ background-size: 3vw;
+}
+#IOmoney:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(133, 52, 255, 0.3);
+}
+
+#StackOverflow{
+ background: url('/img/Links/StackOverflow.svg') center center no-repeat;
+ background-color: #F48024;
+ background-size: 3vw;
+}
+#StackOverflow:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(244, 128, 36, 0.3);
+}
+
+#DTF{
+ background: url('/img/Links/DTF.svg') center center no-repeat;
+ background-color: #6BD9EF;
+ background-size: 3vw;
+}
+#DTF:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(107, 217, 239, 0.3);
+}
+
+#Habr{
+ background: url('/img/Links/Habr.svg') center center no-repeat;
+ background-color: #60A7D2;
+ background-size: 3vw;
+}
+#Habr:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(96, 167, 210, 0.3);
+}
+
+#Kino{
+ background: url('/img/Links/Kino.svg') center center no-repeat;
+ background-color: #000;
+ background-size: 3vw;
+}
+#Kino:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(0, 0, 0, 0.3);
+}
+
+#Qiwi{
+ background: url('/img/Links/Qiwi.svg') center center no-repeat;
+ background-color: #FF9511;
+ background-size: 3vw;
+}
+#Qiwi:hover{
+ box-shadow: 0px 0px 0px 1vw rgb(255, 149, 17, 0.3);
+}
+
+#HH{
+ background: url('/img/Links/HH.svg') center center no-repeat;
+ background-color: #E0021F;
+ background-size: 3vw;
+}
+
+#VC{
+ background: url('/img/Links/VC.svg') center center no-repeat;
+ /* background-color: #F6CBD3; */
+ /* background-color: #FFC4DD; */
+ /* background-color: #FFBBBB; */
+ background-color: #F999B7;
+ background-size: 3vw;
+}
+
+
+@media screen and (orientation: portrait) {
+ #Inst,
+ #Twitter,
+ #Telegram,
+ #Mail,
+ #YouTube,
+ #Patreon,
+ #Github,
+ #Svidcan,
+ #Donate,
+ #VK,
+ #Repl,
+ #Repl,
+ #Gitlab,
+ #Jsfiddle,
+ #Zoom,
+ #Codepen,
+ #Zen,
+ #Litmarket,
+ #Telegram_writer,
+ #Telegram_prog,
+ #IOmoney,
+ #Boosty,
+ #StackOverflow,
+ #DTF,
+ #Habr,
+ #Kino,
+ #Qiwi,
+ #HH,
+ #VC{
+    background-size: 40%;
+    position: static;
+ }
+
+ #Mail:hover{
+    background-size: 40%;
+ }
+
+ /* #Mail:hover::after{
+    background-size: 40%;
+    font-size: 12px;
+ } */
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+
+ #Inst{
+    background-color: #07de7e;
+}
+
+#Twitter{
+    background-color: #ff4400;
+}
+
+#Telegram_writer{
+    background-color: #ff6b00;
+}
+
+#Telegram_prog{
+    background-color: #ff6b00;
+}
+
+#Mail{
+    background-color: #0053ff;
+}
+
+#YouTube{
+    background-color: #00dadb;
+}
+
+#Patreon{
+    background-color: #00b4dc;
+}
+
+#Github{
+    background-color: #b5bcbc;
+}
+
+#Svidcan{
+    background-color: #00eeee;
+}
+
+#Donate{
+    background-color: #c036cd;
+}
+
+#VK{
+    background-color: #d06800;
+}
+
+#Repl{
+    background-color: #ff442b;
+}
+
+#Gitlab{
+    background-color: #66cccc;
+}
+
+#Jsfiddle{
+    background-color: #f0b100;
+}
+
+#Zoom{
+    background-color: #df8d00;
+}
+
+#Codepen{
+    background-color: #87e385;
+}
+
+#Zen{
+    background-color: #000;
+}
+
+#Litmarket{
+    background-color: #7d9e00;
+}
+
+#Boosty{
+    background-color: #1f96c2;
+}
+
+#VK{
+    background-color: #d06800;
+}
+
+#IOmoney{
+   background-color: #7acb00;
+}
+
+#StackOverflow{
+   background-color: #f48024;
+}
+
+ #Inst,
+ #Twitter,
+ #Telegram,
+ #Mail,
+ #YouTube,
+ #Patreon,
+ #Github,
+ #Svidcan,
+ #Donate,
+ #VK,
+ #Repl,
+ #Repl,
+ #Gitlab,
+ #Jsfiddle,
+ #Zoom,
+ #Codepen,
+ #Zen,
+ #Litmarket,
+ #Telegram_writer,
+ #Telegram_prog,
+ #IOmoney,
+ #Boosty,
+ #StackOverflow{
+    filter: invert(100%);
+ }
+} */
