@@ -2,7 +2,7 @@
   "version": "1.0",
   "api_version": 1,
   "layout": {
-    "logo": "icon.svg",
-    "color": "#0084C8"
+    "logo": "tableau.png",
+    "color": "#FFFFFF"
   }
 }
