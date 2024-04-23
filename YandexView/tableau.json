@@ -4,6 +4,6 @@
   "layout": {
       "logo": "tableau.png",
       "color": "#FFFFFF",
-      "show_title": true
+      "show_title": false
   }
 }
